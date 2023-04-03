@@ -1,0 +1,51 @@
+.infoBoard {
+  --check-image-max-width: 6rem;
+  --info-board-background-color: #18cae6;
+  --info-board-border: 4px solid #18cae6;
+  --info-board-box-shadow: 0 0 2px 4px white;
+  --info-board-outline: 1px solid black;
+  --info-board-background-filter: inherit;
+  --info-board-background-opacity: 0.5;
+
+  width: calc(8 * 2.5rem);
+  position: relative;
+  grid-area: infoBoard;
+  margin: auto;
+  outline: 1px solid black;
+  background: var(--info-board-background-color);
+  border: var(--info-board-border);
+  box-shadow: var(--info-board-box-shadow);
+}
+
+@media (max-width: 768px) {
+  .infoBoard {
+    margin: 0 auto auto;
+  }
+}
+
+.infoBoardBackground {
+  height: 100%;
+  width: 100%;
+  background: var(--info-board-background-color);
+  position: absolute;
+  opacity: var(--info-board-background-opacity);
+  filter: var(--info-board-background-filter);
+}
+
+.blackTeamView {
+  --info-board-background-color: black;
+  --info-board-border: 4px solid black;
+  --info-board-box-shadow: 1px 1px 3px 6px #18cae6;
+  --info-board-outline: 1px solid white;
+  --info-board-background-filter: blur(40px);
+  --info-board-background-opacity: 1;
+}
+
+.darkPieceBlur {
+  height: 100%;
+  width: 100%;
+  background: #18cae6;
+  position: absolute;
+  opacity: 0.5;
+  filter: var(140px);
+}

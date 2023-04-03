@@ -1,0 +1,52 @@
+.boardSquare {
+  --board-square-size: 4rem;
+
+  --outline-color: #18cae6;
+
+  opacity: 0.9;
+  background-color: var(--boardSquare-background-color);
+  border: var(--gridContainer-border);
+  box-shadow: 0 2px 4px var(--boardSquare-box-shadow-color);
+  outline: 1px solid var(--outline-color);
+  position: relative;
+  width: var(--board-square-size);
+  height: var(--board-square-size);
+
+  @media (max-width: 768px) {
+    --board-square-size: 2.25rem;
+  }
+}
+
+.boardSquareDark {
+  --boardSquare-background-color: black;
+  --boardSquare-box-shadow-color: white;
+  --gridContainer-border: 1px solid white;
+  --outline-color: white;
+}
+
+.boardSquareDark::before {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  opacity: 0.2;
+  width: 400px;
+}
+
+.lightUp {
+  --boardSquare-background-color: yellow;
+
+  opacity: 1;
+}
+
+.whiteTeamView {
+  transform: rotate(180deg);
+}
+
+.boardSquareBackground {
+  position: absolute;
+  background: yellow;
+  height: 1.65rem;
+  width: 1.65rem;
+  transform: translate(25%, 40%);
+  filter: blur(11px);
+}

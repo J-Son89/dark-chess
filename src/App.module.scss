@@ -1,0 +1,33 @@
+.app {
+  text-align: center;
+  display: grid;
+  background-color: #282c34;
+  height: 100vh;
+  overflow: auto;
+  grid-template-areas:
+    "header header"
+    "page page";
+  grid-template-rows: 1fr 11fr;
+  grid-template-columns: 1fr auto;
+  grid-column-gap: 0.25rem;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    grid-template-areas:
+      "header"
+      "page";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 11fr;
+  }
+}

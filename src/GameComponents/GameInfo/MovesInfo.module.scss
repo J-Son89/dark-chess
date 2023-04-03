@@ -1,0 +1,47 @@
+.movesInfo {
+  --movesInfo-prefillValues-direction: row-reverse;
+
+  grid-area: movesInfo;
+  margin: 0 auto auto;
+  background: white;
+  text-align: center;
+  width: calc(8 * 2.6rem);
+  overflow-y: hidden;
+  height: 20px;
+  -ms-overflow-style: none;
+  display: flex;
+  flex-direction: var(--movesInfo-prefillValues-direction);
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+  &::selection { background: transparent; }
+  &::-moz-selection { background: transparent; }
+}
+
+.moveInfoIndex {
+  font-weight: bold;
+  &::selection { background: transparent; }
+  &::-moz-selection { background: transparent; }
+}
+
+.moveInfo {
+  padding: 0 8px;
+  &::selection { background: transparent; }
+  &::-moz-selection { background: transparent; }
+}
+
+.prefillValues {
+  --movesInfo-prefillValues-direction: row;
+
+  justify-content: space-evenly;
+}

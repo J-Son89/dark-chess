@@ -1,0 +1,17 @@
+.header {
+  grid-area: header;
+  min-height: 3rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.75em;
+  margin-block-start: 0.65em;
+  font-weight: bold;
+  padding: 0 1rem;
+}
+
+.invisible {
+  visibility: hidden;
+}

@@ -1,0 +1,83 @@
+.menuPage {
+  --menu-color: #18cae6;
+  --menu-color-inverse: white;
+  --menu-background-color: black;
+  --menu-border-color: var(--menu-color);
+  --menu-box-shadow: 0 0 2px var(--menu-color-inverse);
+
+  grid-area: page;
+  text-align: center;
+  display: grid;
+  background-color: #282c34;
+  overflow: auto;
+  grid-template-areas:
+    "logo logo"
+    "options options";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 3fr 8fr;
+  grid-column-gap: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .menuPage {
+    grid-template-areas:
+      "logo"
+      "options";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr 8fr;
+  }
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.logoImg {
+  height: 14rem;
+}
+
+.menuOptions {
+  grid-area: options;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.menuOption {
+  position: relative;
+  text-decoration: none;
+  margin: 0.5rem;
+  font-size: 1.25rem;  
+  text-align: center;
+  background-color: var(--menu-background-color);
+  color: var(--menu-color);
+  border: 1px solid var(--menu-border-color);
+  box-shadow: var(--menu-box-shadow);
+  border-radius: 4px;
+  height: 3rem;
+  width: 10rem;
+  line-height: 3rem;
+
+  @media (max-width: 768px) {
+    --menu-font-size: 0.5rem;
+  }
+
+  &:hover {
+    --menu-box-shadow: 1px 1px 3px 2px var(--menu-color);
+    --menu-option-background-color: white;
+
+    outline: 0.5px solid var(--menu-color);
+  }
+}
+
+.menuOptionBackground {
+  position: absolute;
+  height: 100%;
+  background: var(--menu-option-background-color);
+  width: 100%;
+  filter: blur(90px);
+}
+
+.menuOptionText {
+  z-index: 10;
+}

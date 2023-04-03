@@ -1,0 +1,37 @@
+.instructionsPage {
+  --instructions-color: #18cae6;
+  --instructions-color-inverse: white;
+  --instructions-background-color: black;
+  --instructions-border-color: var(--instructions-color);
+  --instructions-box-shadow: 0 0 2px var(--instructions-color-inverse);
+
+  grid-area: page;
+  text-align: center;
+  display: grid;
+  background-color: #282c34;
+  overflow: auto;
+  grid-template-areas:
+    "instructionImage instructionImage"
+    "infoBoard infoBoard";
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .instructionsPage {
+    grid-template-areas:
+      "instructionImage"
+      "infoBoard";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+.instructionImage {
+  max-height: 22rem;
+}
+
+.instructionImageContainer {
+  grid-area: instructionImage;
+}

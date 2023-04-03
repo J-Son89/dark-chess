@@ -1,0 +1,72 @@
+{
+  "name": "dark-chess",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.9.7",
+    "axios": "^0.19.0",
+    "classnames": "^2.2.6",
+    "crypto": "^1.0.1",
+    "immer": "^3.2.0",
+    "lodash": "4.17.15",
+    "memoize-one": "^5.1.1",
+    "node-sass": "^4.11.0",
+    "react": "^16.8.6",
+    "react-dnd-cjs": "8.0.3",
+    "react-dnd-html5-backend-cjs": "^8.0.3",
+    "react-dnd-touch-backend": "^9.3.4",
+    "react-dom": "^16.8.6",
+    "react-page-visibility": "^6.2.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.0.1",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "prettier": "node ./.prettier.js write",
+    "prettier-check": "node ./.prettier.js check",
+    "eslint": "eslint",
+    "eslint-main": "node ./.eslint.js",
+    "stylelint-main": "stylelint \"**/*.scss\"",
+    "lint": "npm run prettier-check && npm run eslint-main && npm run stylelint-main"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-no-only-tests": "^2.1.0",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "prettier": "^1.16.3",
+    "stylelint": "^9.2.0",
+    "stylelint-config-standard": "^18.0.0",
+    "stylelint-declaration-use-variable": "^1.7.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-router-dom": "^4.2.2",
+    "core-js": "^2.6.9"
+  }
+}

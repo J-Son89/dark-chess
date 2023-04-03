@@ -1,0 +1,104 @@
+.modal {
+  --modal-option-transform: translate(-50%, -50%);
+  --modal-background-color: black;
+  --modal-border: 4px solid #18cae6;
+  --modal-box-shadow: 0 0 2px 4px white;
+  --game-over-heading-color: white;
+  --modal-grid-template-columns: 1fr 1fr;
+  --modal-grid-template-rows: 1fr 1fr;
+  --modal-heading-margin: 1rem 0 auto;
+  --modal-size: 60%;
+  --modal-top: 50%;
+
+  position: absolute;
+  top: var(--modal-top);
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: var(--modal-option-transform);
+  border: var(--modal-border);
+  box-shadow: var(--modal-box-shadow);
+  width: var(--modal-size);
+  height: var(--modal-size);
+  background: var(--modal-background-color);
+  z-index: 20;
+  display: grid;
+  grid-template-columns: var(--modal-grid-template-columns);
+  grid-template-rows: var(--modal-grid-template-rows);
+}
+
+.whiteTeamViewForUpgradeModal {
+  --modal-background-color: white;
+  --modal-border: 4px solid black;
+  --modal-box-shadow: 0 0 2px 4px #18cae6;
+  --game-over-heading-color: black;
+
+  outline: 1px solid black;
+}
+
+.whiteTeamView {
+  --modal-option-transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.gameOverModal {
+  --modal-grid-template-columns: auto;
+  --modal-grid-template-rows: 2fr 2fr 8fr;
+}
+
+.loadingModal {
+  --modal-grid-template-columns: auto;
+  --modal-grid-template-rows: auto 1fr;
+  --modal-size: 14rem;
+  --modal-top: 15rem;
+}
+
+.loadingModalHeader {
+  z-index: 10;
+  color: var(--game-over-heading-color);
+  margin: var(--modal-heading-margin);
+
+  @media (max-width: 768px) {
+    --modal-heading-margin: inherit;
+  }
+}
+
+.loadingSpinner {
+  height: 10vmin;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .gameOverImg {
+    max-height: 6rem;
+  }
+}
+
+.gameOverImgContainer {
+  z-index: 20;
+}
+
+.gameOverImgBackground {
+  height: 100%;
+  width: 100%;
+  background: #18cae6;
+  position: absolute;
+  filter: blur(60px);
+}
+
+.gameOverImagesContainer {
+  position: absolute;
+  left: 22.5%;
+  z-index: 20;
+  top: 0;
+}
+
+.gameOverHeading {
+  z-index: 10;
+  color: var(--game-over-heading-color);
+  margin: var(--modal-heading-margin);
+
+  @media (max-width: 768px) {
+    --modal-heading-margin: 0.5rem 0 auto;
+  }
+}

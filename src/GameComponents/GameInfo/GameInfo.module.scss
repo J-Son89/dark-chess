@@ -1,0 +1,148 @@
+.gameInfo {
+  --check-image-max-width: 6rem;
+  --game-info-background-color: #18cae6;
+  --game-info-border: 4px solid #18cae6;
+  --game-info-box-shadow: 0 0 2px 4px white;
+  --game-info-outline: 1px solid black;
+  --game-info-grid-template-columns: 1fr 1fr 1fr;
+  --game-info-grid-template-rows: 1fr 1fr;
+  --game-info-background-filter: inherit;
+  --game-info-background-opacity: 0.5;
+  --game-info-text: black;
+  --button-background: white;
+  --button-box-shadow: 0 2px 2px 2px black;
+  --button-outline: inherit;
+  --button-color: black;
+
+  width: calc(8 * 2.5rem);
+  position: relative;
+  margin: auto;
+  outline: 1px solid black;
+  background: var(--game-info-background-color);
+  border: var(--game-info-border);
+  box-shadow: var(--game-info-box-shadow);
+  display: grid;
+  grid-template-areas:
+    'userProfile userProfile clock'
+    'piecesTaken piecesTaken PiecesTaken';
+  grid-template-columns: var(--game-info-grid-template-columns);
+  grid-template-rows: var(--game-info-grid-template-rows);
+}
+
+.gameInfoText {
+  color: var(--game-info-text);
+  z-index: 10;
+  padding: 0 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.gameInfoBackground {
+  height: 100%;
+  width: 100%;
+  background: var(--game-info-background-color);
+  position: absolute;
+  opacity: var(--game-info-background-opacity);
+  filter: var(--game-info-background-filter);
+}
+
+.blackTeamView {
+  --game-info-background-color: black;
+  --game-info-border: 4px solid black;
+  --game-info-box-shadow: 1px 1px 3px 6px #18cae6;
+  --game-info-outline: 1px solid white;
+  --game-info-background-filter: blur(40px);
+  --game-info-background-opacity: 1;
+  --game-info-text: white;
+  --button-background: #18cae6;
+  --button-box-shadow: 0 2px 2px 1px white;
+  --button-outline: 1px solid black;
+  --button-color: white;
+}
+
+.darkPieceBlur {
+  height: 100%;
+  width: 100%;
+  background: #18cae6;
+  position: absolute;
+  opacity: 0.5;
+  filter: var(140px);
+}
+
+.gameInfoTop {
+  grid-area: gameInfoTop;
+}
+
+.gameInfoBottom {
+  grid-area: gameInfoBottom;
+}
+
+@media (max-width: 768px) {
+  .gameInfo {
+    margin: 0 auto auto;
+  }
+}
+
+.playerInCheck {
+  outline: yellow;
+  box-shadow: 0 0 2px 2px yellow;
+}
+
+.playerIcon {
+  width: 2rem;
+  height: 2rem;
+  border: solid 1px var(--game-info-text);
+}
+
+.userProfile {
+  grid-area: userProfile;
+  position: relative;
+  align-items: center;
+  display: inline-flex;
+}
+
+.playerName {
+  padding: 0 1rem;
+  color: white;
+}
+
+.clockContainer {
+  position: relative;
+  grid-area: clock;
+  color: white;
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: center;
+  // padding: 0 auto;
+}
+
+.clock {
+  position: relative;
+  grid-area: clock;
+  color: white;
+  border: solid 1px white;
+  width: 4rem;
+  height: 2rem;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 2rem;
+}
+
+.piecesTakenContainer {
+  grid-area: piecesTaken;
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.piecesTaken {
+  display: flex;
+  align-items:center;
+}
+
+.pieceTaken {
+  // display: flex;
+  position: relative;
+  // flex-direction: row-reverse;
+}
